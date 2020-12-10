@@ -6,8 +6,11 @@ var gTxtLocation = { x: 250, y: 100 }
 var gChosenImg
 var gSelectedLine
 var fonSize = 40
+var gFontSelected
 
 function init() {
+    gFontSelected = 0
+
     gSelectedLine = 0
     gCanvas = document.getElementById('canvas')
     gCtx = gCanvas.getContext('2d')
@@ -68,7 +71,7 @@ function drawMeme() {
         gCtx.lineWidth = '1.5'
         var x = line.x
         var y = line.y
-        gCtx.font = 'italic small-caps 900 ' + line.size + 'px serif'
+        gCtx.font = 'normal small-caps 900 ' + line.size + 'px ' + gFonts[line.font]
         gCtx.textAlign = 'center'
         gCtx.fillText(text, x, y)
         gCtx.strokeText(text, x, y)
@@ -86,10 +89,12 @@ function changeTxt() {
         gCtx.lineWidth = '1.5'
         var x = line.x
         var y = line.y
-        gCtx.font = 'italic small-caps 900 ' + line.size + 'px serif'
+        gCtx.font = 'normal small-caps 900 ' + line.size + 'px ' + gFonts[line.font]
         gCtx.textAlign = 'center'
         gCtx.fillText(text, x, y)
-        gCtx.strokeText(text, x, y)
+            // gCtx.strokeText(text, x, y)
+            // (text, x, y)
+
     })
     drawTxtBox()
 }
@@ -150,16 +155,17 @@ function onLineDown() {
 
 function onChangeLine() {
     var elChaneButton = document.querySelector('.change-line')
+    var line = gMeme.lines
     if (gSelectedLine === 0) {
         elChaneButton.innerHTML = 'Change to first line'
         gSelectedLine = 1;
-        gMeme.lines[0].isSelected = false
-        gMeme.lines[1].isSelected = true
+        line[0].isSelected = false
+        line[1].isSelected = true
     } else {
         elChaneButton.innerHTML = 'Change to second line'
         gSelectedLine = 0;
-        gMeme.lines[0].isSelected = true
-        gMeme.lines[1].isSelected = false
+        line[0].isSelected = true
+        line[1].isSelected = false
     }
     drawMeme()
     drawTxtBox()

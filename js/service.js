@@ -17,12 +17,13 @@ var gImgs = [
     { id: 13, url: './img/13.jpg', keywords: ['happy'] },
     { id: 14, url: './img/14.jpg', keywords: ['happy'] }
 ];
-
+var gFonts = ['impact', 'arial', 'nerko one']
 var gMeme = {
     selectedImgId: 5,
     selectedLineIdx: 0,
     lines: [{
         idx: 0,
+        font: 0,
         txt: '',
         size: 35,
         align: 'left',
@@ -32,6 +33,7 @@ var gMeme = {
         isSelected: true
     }, {
         idx: 1,
+        font: 2,
         txt: '',
         size: 35,
         align: 'left',

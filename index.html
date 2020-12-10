@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
     <title>Aderajoes meme generator</title>
+
 </head>
 
 <body class="body" onload="init()">
@@ -27,6 +28,7 @@
         <div class="aside">
 
             <div id="edit-options">
+
                 <div class="line-height">
                     <span class="linePlacement"> Change line height</span>
                     <button class="lineUp" onclick="onLineUp()">+</button>
@@ -39,14 +41,15 @@
                     <button class="smaller-font" onclick="onFontDecrs()">-</button>
 
                 </div>
-
             </div>
+
             <input type="text" name="memeText" placeholder="enter text here">
             <button class="change-text" onclick="onChangeText()">Edit</button>
             <button class="change-line" onclick="onChangeLine()">Change to second line </button>
             <a class="download" onclick="downloadMeme(this)" download="">Download</a>
             <button class="new-meme" onclick="createNewMeme()">new meme</button>
         </div>
+    </div>
     </div>
 
     <script src="./js/service.js"></script>

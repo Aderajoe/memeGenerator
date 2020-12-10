@@ -2,18 +2,34 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Nerko One;
+    src: url(/fonts/NerkoOne-Regular.ttf);
+}
+
 .body {
     margin-top: 0%;
+    display: flex;
+    background-color: rgb(12, 29, 29);
 }
 
 .my-hero {
     position: fixed;
-    background-color: rgb(69, 141, 141);
+    /* background-color: rgb(69, 141, 141); */
+    background-image: linear-gradient(to right, rgb(56, 128, 94), yellow);
     display: flex;
     width: 100%;
     height: 75px;
     justify-content: center;
     align-items: center;
+    max-width: 1258px;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    border-radius: 20px;
+    font-family: nerko one;
+    font-size: 35px;
 }
 
 .download {
@@ -29,6 +45,11 @@
     display: flex;
     padding-top: 75px;
     display: none;
+    width: 1258px;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
 }
 
 .aside {
@@ -38,9 +59,15 @@
 }
 
 .home-page {
-    padding-top: 75px;
+    margin-top: 75px;
     display: flex;
     flex-direction: column;
+    background-color: rgb(25, 66, 66);
+    max-width: 1258px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header {
