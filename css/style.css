@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    margin-top: 0%;
+}
+
+.my-hero {
+    position: fixed;
+    background-color: rgb(69, 141, 141);
+    display: flex;
+    width: 100%;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+}
+
+.download {
+    display: flex;
+    background-color: orange;
+    width: 20%;
+    margin-left: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit {
+    display: flex;
+    padding-top: 75px;
+    display: none;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.home-page {
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid olivedrab;
+}
+
+#img-pool {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-pool {
+    height: 100px;
+    width: 100px;
+}
+
+#edit-options {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line-height {
+    background-color: antiquewhite;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Aderajoes meme generator</title>
+</head>
+
+<body class="body" onload="init()">
+
+    <div class="my-hero">My hero</div>
+    <!-- <img src="./img/14.jpg" style="display: none;"> -->
+    <div class="home-page">
+        <header class="header"> Chose you desired template</header>
+        <div id="img-pool">
+        </div>
+
+
+    </div>
+    <div class="main-container edit">
+
+        <canvas id="canvas" height="500" width="500"></canvas>
+        <!-- onclick="draw(event)" -->
+        <div class="aside">
+
+            <div id="edit-options">
+                <div class="line-height">
+                    <span class="linePlacement"> Change line height</span>
+                    <button class="lineUp" onclick="onLineUp()">+</button>
+                    <button class="lineDown" onclick="onLineDown()">-</button>
+
+                </div>
+                <div class="font-size">
+                    <span class="linePlacement"> Change font size</span>
+                    <button class="larger-font" onclick="onFontIncrs()">+</button>
+                    <button class="smaller-font" onclick="onFontDecrs()">-</button>
+
+                </div>
+
+            </div>
+            <input type="text" name="memeText" placeholder="enter text here">
+            <button class="change-text" onclick="onChangeText()">add</button>
+            <button class="change-line" onclick="onChangeLine()">Change to second line </button>
+            <a class="download" onclick="downloadMeme(this)" download="">Download</a>
+            <button class="new-meme" onclick="createNewMeme()">new meme</button>
+        </div>
+    </div>
+
+    <script src="./js/service.js"></script>
+    <script src="./js/controller.js"></script>
+
+</body>
+
+</html>
