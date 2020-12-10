@@ -13,6 +13,7 @@ function init() {
     gCtx = gCanvas.getContext('2d')
     clearCanvas()
     onLoadPage()
+
 }
 
 function createNewMeme() {
@@ -30,6 +31,8 @@ function onChooseImg(id) {
     elEditPage.style.display = 'flex'
     var elEntryPage = document.querySelector('.home-page')
     elEntryPage.style.display = 'none'
+    drawTxtBox()
+    drawTxtBox()
 }
 
 function onLoadPage() {
@@ -88,11 +91,13 @@ function changeTxt() {
         gCtx.fillText(text, x, y)
         gCtx.strokeText(text, x, y)
     })
+    drawTxtBox()
 }
 
 function drawTxtBox() {
-    var x = gTxtLocation.x;
-    var y = gTxtLocation.y;
+    var line = gMeme.lines[gSelectedLine]
+    var x = line.x;
+    var y = line.y;
     gCtx.beginPath()
     gCtx.moveTo(x - 100, y - 20)
     gCtx.lineTo(x + 100, y - 20)
@@ -102,7 +107,7 @@ function drawTxtBox() {
         //gCtx.strokeStyle = 'black'
     gCtx.stroke()
         // gCtx.fillStyle = 'black'
-    gCtx.fill()
+        // gCtx.fill()
 }
 
 function reDrawImg() {
@@ -156,6 +161,8 @@ function onChangeLine() {
         gMeme.lines[0].isSelected = true
         gMeme.lines[1].isSelected = false
     }
+    drawMeme()
+    drawTxtBox()
 }
 
 function onFontIncrs() {
