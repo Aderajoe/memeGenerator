@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: Nerko One;
-    src: url(/fonts/NerkoOne-Regular.ttf);
+    src: url("../fonts/NerkoOne-Regular.ttf");
 }
 
 .body {
@@ -32,9 +32,10 @@
     font-size: 35px;
 }
 
-.download:hover{
+.download:hover {
     background-color: rgb(43, 144, 226);
 }
+
 .edit {
     display: flex;
     padding-top: 75px;
@@ -50,8 +51,8 @@
     background-color: rgb(25, 66, 66);
     display: grid;
     width: 342px;
-     column-gap: 3px;
-    row-gap: 3px; 
+    column-gap: 3px;
+    row-gap: 3px;
     max-height: 345px;
     left: 0;
     right: 0;
@@ -59,7 +60,7 @@
     margin-right: auto;
     border-radius: 30px;
     grid-template-columns: repeat(15, 20px);
-    grid-template-rows:  repeat(15, 20px);
+    grid-template-rows: repeat(15, 20px);
     grid-template-areas: 'line-height';
 }
 
@@ -87,13 +88,12 @@
     margin-top: 15px;
     margin-bottom: 5px;
     border-radius: 5px;
-    
 }
 
 #edit-options {
     display: grid;
-     grid-template-columns: repeat(13, 20px);
-    grid-template-rows:  repeat(3, 20px);
+    grid-template-columns: repeat(13, 20px);
+    grid-template-rows: repeat(3, 20px);
     grid-row-start: 2;
     grid-row-end: 6;
     grid-column-start: 2;
@@ -102,82 +102,93 @@
     border-radius: 10px;
 }
 
-.option-line{
+.option-line {
     grid-row-start: 1;
-    
     grid-row-end: 1;
-    
     grid-column-start: 2;
     grid-column-end: 7;
 }
-.line-up{
-    grid-row-start: 2;    
-    grid-row-end:4 ;   
+
+.line-up {
+    grid-row-start: 2;
+    grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 4;
 }
-.line-down{
-    grid-row-start: 2;    
-    grid-row-end: 4;    
+
+.line-down {
+    grid-row-start: 2;
+    grid-row-end: 4;
     grid-column-start: 4;
-    grid-column-end: 6; 
+    grid-column-end: 6;
 }
-.option-font{
-    grid-row-start: 1;    
-    grid-row-end: 1;    
+
+.option-font {
+    grid-row-start: 1;
+    grid-row-end: 1;
     grid-column-start: 8;
-    grid-column-end: -1;    
-} 
-.larger-font{
-    grid-row-start: 2;    
-    grid-row-end: 4;    
-    grid-column-start: 8;
-    grid-column-end: 10;    
+    grid-column-end: -1;
 }
-.smaller-font{
-    grid-row-start: 2;    
-    grid-row-end: 4;    
+
+.larger-font {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 8;
+    grid-column-end: 10;
+}
+
+.smaller-font {
+    grid-row-start: 2;
+    grid-row-end: 4;
     grid-column-start: 10;
     grid-column-end: 12;
 }
-.btn{
+
+.btn {
     background-color: rgb(149, 229, 243);
     border-radius: 5px;
     height: 40px;
     width: 40px;
     font-size: 25px;
     font-weight: bolder;
-    font-family:Nerko One ;
+    font-family: Nerko One;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: darkturquoise;
 }
-.btn-option{
+
+.btn-option {
     border-radius: 5px;
     background-color: rgb(149, 229, 243);
 }
-.btn-option:hover{
+
+.btn-option:hover {
     background-color: rgb(125, 192, 204);
 }
-.line-input{
-    grid-row-start: 7;   
-    grid-row-end: 7;    
+
+.line-input {
+    grid-row-start: 7;
+    grid-row-end: 7;
     grid-column-start: 1;
     grid-column-end: -1;
 }
-.change-txt{
-    grid-row-start: 8;   
-    grid-row-end: 10;    
+
+.change-txt {
+    grid-row-start: 8;
+    grid-row-end: 10;
     grid-column-start: 2;
     grid-column-end: 5;
 }
-.change-line{
-    grid-row-start: 8;    
-    grid-row-end: 10;    
+
+.change-line {
+    grid-row-start: 8;
+    grid-row-end: 10;
     grid-column-start: 6;
     grid-column-end: -2;
 }
-.smaller-fontt{
+
+.smaller-fontt {
     background-image: url("../icons/minus.png");
 }
 
@@ -185,21 +196,23 @@
     display: flex;
     background-color: rgb(120, 204, 219);
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     grid-row-start: -5;
     grid-row-end: -4;
     grid-column-start: 6;
     grid-column-end: 11;
     border-radius: 5px;
 }
-.new-meme{
-    grid-row-start: -4;  
-    grid-row-end: -2;   
+
+.new-meme {
+    grid-row-start: -4;
+    grid-row-end: -2;
     grid-column-start: 6;
     grid-column-end: 11;
 }
-@media only screen and (max-width: 600px){
-    .edit{
+
+@media only screen and (max-width: 600px) {
+    .edit {
         flex-direction: column;
     }
 }
