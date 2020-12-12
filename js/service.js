@@ -33,7 +33,7 @@ var gMeme = {
         isSelected: true
     }, {
         idx: 1,
-        font: 2,
+        font: 0,
         txt: '',
         size: 35,
         align: 'left',

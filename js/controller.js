@@ -10,13 +10,11 @@ var gFontSelected
 
 function init() {
     gFontSelected = 0
-
     gSelectedLine = 0
     gCanvas = document.getElementById('canvas')
     gCtx = gCanvas.getContext('2d')
     clearCanvas()
     onLoadPage()
-
 }
 
 function createNewMeme() {
@@ -92,9 +90,7 @@ function changeTxt() {
         gCtx.font = 'normal small-caps 900 ' + line.size + 'px ' + gFonts[line.font]
         gCtx.textAlign = 'center'
         gCtx.fillText(text, x, y)
-            // gCtx.strokeText(text, x, y)
-            // (text, x, y)
-
+        gCtx.strokeText(text, x, y)
     })
     drawTxtBox()
 }
@@ -104,15 +100,14 @@ function drawTxtBox() {
     var x = line.x;
     var y = line.y;
     gCtx.beginPath()
-    gCtx.moveTo(x - 100, y - 20)
-    gCtx.lineTo(x + 100, y - 20)
-    gCtx.lineTo(x + 100, y + 20)
-    gCtx.lineTo(x - 100, y + 20)
+    gCtx.moveTo(x - 200, y - 30)
+    gCtx.lineTo(x + 200, y - 30)
+    gCtx.lineTo(x + 200, y + 10)
+    gCtx.lineTo(x - 200, y + 10)
     gCtx.closePath()
-        //gCtx.strokeStyle = 'black'
     gCtx.stroke()
-        // gCtx.fillStyle = 'black'
-        // gCtx.fill()
+    gCtx.strokeStyle = 'black'
+    gCtx.fillStyle = 'white'
 }
 
 function reDrawImg() {
@@ -130,8 +125,6 @@ function loadImg() {
     }
     drawTxtBox()
 }
-
-
 
 function clearCanvas() {
     gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height)
@@ -179,7 +172,8 @@ function onFontIncrs() {
         line = gMeme.lines[1]
     }
     line.size += 3
-    console.log(line.size)
+    drawMeme()
+    drawTxtBox()
 }
 
 function onFontDecrs() {
@@ -190,4 +184,6 @@ function onFontDecrs() {
         line = gMeme.lines[1]
     }
     line.size += -3
+    drawMeme()
+    drawTxtBox()
 }

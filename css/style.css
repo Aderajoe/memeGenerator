@@ -16,7 +16,6 @@
 
 .my-hero {
     position: fixed;
-   
     background-image: linear-gradient(to right, rgb(56, 128, 94), yellow);
     display: flex;
     width: 100%;
@@ -50,13 +49,10 @@
 #aside {
     background-color: rgb(25, 66, 66);
     display: grid;
-    /* flex-direction: column; */
-    /* flex-grow: 1; */
     width: 342px;
      column-gap: 3px;
     row-gap: 3px; 
     max-height: 345px;
-    
     left: 0;
     right: 0;
     margin-left: auto;
@@ -65,8 +61,6 @@
     grid-template-columns: repeat(15, 20px);
     grid-template-rows:  repeat(15, 20px);
     grid-template-areas: 'line-height';
-    
-    
 }
 
 .home-page {
@@ -79,14 +73,6 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
-}
-
-.header {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding: 20px;
-    border: 2px solid olivedrab;
 }
 
 #img-pool {
@@ -106,37 +92,16 @@
 
 #edit-options {
     display: grid;
-    /* justify-content: center;
-    flex-direction: column;
-    align-items: center; */
-    /* row-gap: 5px;
-    column-gap: 5px; */
      grid-template-columns: repeat(13, 20px);
     grid-template-rows:  repeat(3, 20px);
-    
     grid-row-start: 2;
-    
     grid-row-end: 6;
-    
     grid-column-start: 2;
     grid-column-end: -2;
     background-color: rgb(38, 102, 102);
     border-radius: 10px;
-   
 }
 
-
-/* .line-height {
-    
-    grid-row-start: 1;
-    
-    grid-row-end: 4;
-    
-    grid-column-start: 2;
-    grid-column-end: 7;
-    grid-template-columns: repeat(6, 20px);
-    grid-template-rows:  repeat(3, 20px);
-} */
 .option-line{
     grid-row-start: 1;
     
@@ -146,52 +111,32 @@
     grid-column-end: 7;
 }
 .line-up{
-    grid-row-start: 2;
-    
-    grid-row-end:4 ;
-    
+    grid-row-start: 2;    
+    grid-row-end:4 ;   
     grid-column-start: 2;
     grid-column-end: 4;
-   
-    
-    
-
 }
 .line-down{
-    grid-row-start: 2;
-    
-    grid-row-end: 4;
-    
+    grid-row-start: 2;    
+    grid-row-end: 4;    
     grid-column-start: 4;
-    grid-column-end: 6;
-    background-color: cornsilk;
-    
-
-
+    grid-column-end: 6; 
 }
 .option-font{
-    grid-row-start: 1;
-    
-    grid-row-end: 1;
-    
+    grid-row-start: 1;    
+    grid-row-end: 1;    
     grid-column-start: 8;
-    grid-column-end: -1;
-    
+    grid-column-end: -1;    
 } 
 .larger-font{
-    grid-row-start: 2;
-    
-    grid-row-end: 4;
-    
+    grid-row-start: 2;    
+    grid-row-end: 4;    
     grid-column-start: 8;
-    grid-column-end: 10;
-    
+    grid-column-end: 10;    
 }
 .smaller-font{
-    grid-row-start: 2;
-    
-    grid-row-end: 4;
-    
+    grid-row-start: 2;    
+    grid-row-end: 4;    
     grid-column-start: 10;
     grid-column-end: 12;
 }
@@ -202,9 +147,7 @@
     width: 40px;
     font-size: 25px;
     font-weight: bolder;
-    /* height: 100%; */
     font-family:Nerko One ;
-
 }
 .btn:hover{
     background-color: darkturquoise;
@@ -217,41 +160,30 @@
     background-color: rgb(125, 192, 204);
 }
 .line-input{
-    grid-row-start: 7;
-    
-    grid-row-end: 7;
-    
+    grid-row-start: 7;   
+    grid-row-end: 7;    
     grid-column-start: 1;
     grid-column-end: -1;
 }
 .change-txt{
-    grid-row-start: 8;
-    
-    grid-row-end: 10;
-    
+    grid-row-start: 8;   
+    grid-row-end: 10;    
     grid-column-start: 2;
     grid-column-end: 5;
 }
 .change-line{
-    grid-row-start: 8;
-    
-    grid-row-end: 10;
-    
+    grid-row-start: 8;    
+    grid-row-end: 10;    
     grid-column-start: 6;
     grid-column-end: -2;
 }
 .smaller-fontt{
     background-image: url("../icons/minus.png");
 }
-/* .font-size{
-    background-image: url("../icons/minus.png"); 
-    
-} */
+
 .download {
     display: flex;
     background-color: rgb(120, 204, 219);
-    /* width: 100px; */
-    /* margin-left: 35%;*/
     align-items: center;
     justify-content: center; 
     grid-row-start: -5;
@@ -261,10 +193,8 @@
     border-radius: 5px;
 }
 .new-meme{
-    grid-row-start: -4;
-   
-    grid-row-end: -2;
-    
+    grid-row-start: -4;  
+    grid-row-end: -2;   
     grid-column-start: 6;
     grid-column-end: 11;
 }
