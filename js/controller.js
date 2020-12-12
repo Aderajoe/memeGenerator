@@ -50,7 +50,7 @@ function onLoadPage() {
 
 function drawText(text, x, y) {
     gCtx.lineWidth = '1.5'
-    gCtx.font = 'italic small-caps 900 ' + fonSize + 'px serif'
+    gCtx.font = 'italic small-caps 900 ' + fonSize + 'px '+gFonts[line.font]
     gCtx.textAlign = 'center'
     gCtx.fillText(text, x, y)
     gCtx.strokeText(text, x, y)

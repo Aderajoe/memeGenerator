@@ -33,15 +33,9 @@
     font-size: 35px;
 }
 
-.download {
-    display: flex;
-    background-color: orange;
-    width: 100px;
-    margin-left: 35%;
-    align-items: center;
-    justify-content: center;
+.download:hover{
+    background-color: rgb(43, 144, 226);
 }
-
 .edit {
     display: flex;
     padding-top: 75px;
@@ -53,20 +47,26 @@
     left: 0;
 }
 
-.aside {
+#aside {
     background-color: rgb(25, 66, 66);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    /* flex-direction: column; */
     /* flex-grow: 1; */
-    width: 300px;
+    width: 342px;
+     column-gap: 3px;
+    row-gap: 3px; 
+    max-height: 345px;
     
-    max-height: 300px;
-   
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
+    grid-template-columns: repeat(15, 20px);
+    grid-template-rows:  repeat(15, 20px);
+    grid-template-areas: 'line-height';
+    
+    
 }
 
 .home-page {
@@ -105,28 +105,171 @@
 }
 
 #edit-options {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    /* justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
+    /* row-gap: 5px;
+    column-gap: 5px; */
+     grid-template-columns: repeat(13, 20px);
+    grid-template-rows:  repeat(3, 20px);
+    
+    grid-row-start: 2;
+    
+    grid-row-end: 6;
+    
+    grid-column-start: 2;
+    grid-column-end: -2;
+    background-color: rgb(38, 102, 102);
+    border-radius: 10px;
+   
 }
-.option{
-    font-family: cursive;
-    /* background-image: url("../icons/minus.png"); */
+
+
+/* .line-height {
+    
+    grid-row-start: 1;
+    
+    grid-row-end: 4;
+    
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-template-columns: repeat(6, 20px);
+    grid-template-rows:  repeat(3, 20px);
+} */
+.option-line{
+    grid-row-start: 1;
+    
+    grid-row-end: 1;
+    
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+.line-up{
+    grid-row-start: 2;
+    
+    grid-row-end:4 ;
+    
+    grid-column-start: 2;
+    grid-column-end: 4;
+   
+    
+    
 
 }
-.line-height {
-    background-color: antiquewhite;
+.line-down{
+    grid-row-start: 2;
+    
+    grid-row-end: 4;
+    
+    grid-column-start: 4;
+    grid-column-end: 6;
+    background-color: cornsilk;
+    
+
+
+}
+.option-font{
+    grid-row-start: 1;
+    
+    grid-row-end: 1;
+    
+    grid-column-start: 8;
+    grid-column-end: -1;
+    
+} 
+.larger-font{
+    grid-row-start: 2;
+    
+    grid-row-end: 4;
+    
+    grid-column-start: 8;
+    grid-column-end: 10;
+    
+}
+.smaller-font{
+    grid-row-start: 2;
+    
+    grid-row-end: 4;
+    
+    grid-column-start: 10;
+    grid-column-end: 12;
+}
+.btn{
+    background-color: rgb(149, 229, 243);
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    font-weight: bolder;
+    /* height: 100%; */
+    font-family:Nerko One ;
+
+}
+.btn:hover{
+    background-color: darkturquoise;
+}
+.btn-option{
+    border-radius: 5px;
+    background-color: rgb(149, 229, 243);
+}
+.btn-option:hover{
+    background-color: rgb(125, 192, 204);
+}
+.line-input{
+    grid-row-start: 7;
+    
+    grid-row-end: 7;
+    
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+.change-txt{
+    grid-row-start: 8;
+    
+    grid-row-end: 10;
+    
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+.change-line{
+    grid-row-start: 8;
+    
+    grid-row-end: 10;
+    
+    grid-column-start: 6;
+    grid-column-end: -2;
 }
 .smaller-fontt{
     background-image: url("../icons/minus.png");
 }
 /* .font-size{
-     background-image: url("../icons/minus.png"); 
-
+    background-image: url("../icons/minus.png"); 
+    
 } */
-@media only screen and (max-width: 600px){
-.edit{
-    flex-direction: column;
+.download {
+    display: flex;
+    background-color: rgb(120, 204, 219);
+    /* width: 100px; */
+    /* margin-left: 35%;*/
+    align-items: center;
+    justify-content: center; 
+    grid-row-start: -5;
+    grid-row-end: -4;
+    grid-column-start: 6;
+    grid-column-end: 11;
+    border-radius: 5px;
 }
+.new-meme{
+    grid-row-start: -4;
+   
+    grid-row-end: -2;
+    
+    grid-column-start: 6;
+    grid-column-end: 11;
+}
+@media only screen and (max-width: 600px){
+    .edit{
+        flex-direction: column;
+    }
 }

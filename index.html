@@ -25,30 +25,32 @@
 
         <canvas id="canvas" height="500" width="500"></canvas>
         <!-- onclick="draw(event)" -->
-        <div class="aside">
+        <div id="aside">
 
             <div id="edit-options">
 
-                <div class="line-height">
-                    <span class="option"> Change line height</span>
-                    <button class="lineUp" onclick="onLineUp()">+</button>
-                    <button class="lineDown" onclick="onLineDown()">-</button>
+                <!-- <div class="line-height"> -->
+                    <span class="option-line">line height</span>
+                    <!-- <span class="optionn" onclick="onLineUp()"> +</span> -->
 
-                </div>
-                <div class="font-size">
-                    <span class="option"> Change font size</span>
-                    <button class="larger-font" onclick="onFontIncrs()">+</button>
-                    <button class="smaller-font" onclick="onFontDecrs()">-</button>
-                    <span class="smaller-fontt" onclick="onFontDecrs()">hi</span>
+                    <button class="line-up plus btn" onclick="onLineUp()">+</button>
+                    <button class="line-down minus btn" onclick="onLineDown()">-</button>
 
-                </div>
+                <!-- </div>
+                <div class="font-size"> -->
+                    <span class="option-font"> Font size</span>
+                    <button class="larger-font btn" onclick="onFontIncrs()">+</button>
+                    <button class="smaller-font btn" onclick="onFontDecrs()">-</button>
+                   
+
+                <!-- </div> -->
             </div>
 
-            <input type="text" name="memeText" placeholder="enter text here">
-            <button class="change-text" onclick="onChangeText()">Edit</button>
-            <button class="change-line" onclick="onChangeLine()">Change to second line </button>
+            <input type="text" class="line-input" name="memeText" placeholder="enter text here">
+            <button class="change-txt btn-option" onclick="onChangeText()">Change text</button>
+            <button class="change-line btn-option" onclick="onChangeLine()">Change to second line </button>
+            <button class="new-meme btn-option" onclick="createNewMeme()">new meme</button>
             <a class="download" onclick="downloadMeme(this)" download="">Download</a>
-            <button class="new-meme" onclick="createNewMeme()">new meme</button>
         </div>
     </div>
     </div>
