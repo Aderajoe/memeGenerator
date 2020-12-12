@@ -48,7 +48,7 @@ function onLoadPage() {
 
 function drawText(text, x, y) {
     gCtx.lineWidth = '1.5'
-    gCtx.font = 'italic small-caps 900 ' + fonSize + 'px '+gFonts[line.font]
+    gCtx.font = 'italic small-caps 900 ' + fonSize + 'px ' + gFonts[line.font]
     gCtx.textAlign = 'center'
     gCtx.fillText(text, x, y)
     gCtx.strokeText(text, x, y)
@@ -131,6 +131,7 @@ function clearCanvas() {
 }
 
 function downloadMeme(elLink) {
+    drawMeme()
     const data = gCanvas.toDataURL();
     elLink.href = data;
     elLink.download = 'my-img.jpg';
@@ -139,11 +140,13 @@ function downloadMeme(elLink) {
 function onLineUp() {
     gMeme.lines[gSelectedLine].y += -25;
     drawMeme()
+    drawTxtBox()
 }
 
 function onLineDown() {
     gMeme.lines[gSelectedLine].y += +25;
     drawMeme()
+    drawTxtBox()
 }
 
 function onChangeLine() {
