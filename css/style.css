@@ -236,31 +236,32 @@
         width: 75px;
     }
     .edit {
-        max-width: 500px;
-        width: 85vw;
-        max-height: 300px;
+        /* max-width: 500px; */
+        width: 100vw;
+        /* max-height: 300px; */
     }
     #canvas {
-        width: 300px;
-        min-width: 270px;
-        height: 300px;
+        width: 45vw;
+        height: 45vw;
+        /* min-width: 270px; */
+        /* height: 300px; */
         margin-right: 10px;
     }
     #aside {
-        background-color: rgb(25, 66, 66);
-        width: 270px;
-        height: 270px;
-        left: 0;
+        /* background-color: rgb(25, 66, 66); */
+        /* width: 270px;
+        height: 270px; */
+        /* left: 0;
         right: 0;
         margin-left: auto;
-        margin-right: auto;
-        grid-template-columns: repeat(15, 15px);
-        grid-template-rows: repeat(15, 15px);
+        margin-right: auto; */
+        /* grid-template-columns: repeat(15, 15px);
+        grid-template-rows: repeat(15, 15px); */
     }
     #edit-options {
-        grid-template-columns: repeat(15, 15px);
-        grid-template-rows: repeat(4, 15px);
-        row-gap: 6px;
+        /* grid-template-columns: repeat(15, 15px);
+        grid-template-rows: repeat(4, 15px); */
+        /* row-gap: 6px; */
     }
     .btn {
         border-radius: 5px;
@@ -268,7 +269,7 @@
         width: 30px;
         font-size: 25px;
     }
-    .line-up {
+    /* .line-up {
         grid-row-start: 2;
         grid-row-end: 4;
         grid-column-start: 2;
@@ -303,7 +304,7 @@
         grid-row-end: 1;
         grid-column-start: 2;
         grid-column-end: 8;
-    }
+    } */
 }
 
 @media only screen and (max-width: 600px) {
@@ -317,18 +318,24 @@
     .edit {
         max-width: 500px;
         width: 85vw;
-        max-height: 300px;
+        max-height: 85vw;
         height: 8px;
     }
     .my-hero {
         max-width: 550px;
     }
     #canvas {
-        width: 270px;
-        height: 270px;
+        /* min-width: 300px;
+        min-height: 300px; */
+        width: 85vw;
+        height: 85vw;
         margin: auto;
     }
     #aside {
         margin-top: 10px;
+        width: 85vw;
+        height: 85vw;
+        /* min-width: 300px;
+        min-height: 300px; */
     }
 }

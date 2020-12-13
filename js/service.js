@@ -52,6 +52,9 @@ function clearData() {
         if (line.idx === 0) {
             line.y = 75
         } else { line.y = 425 }
+        if (line.idx === gSelectedLine) {
+            line.isSelected = true
+        } else { line.isSelected = false }
     })
 }
 

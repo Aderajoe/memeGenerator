@@ -22,8 +22,12 @@ function createNewMeme() {
     elEditPage.style.display = 'none'
     var elEntryPage = document.querySelector('.home-page')
     elEntryPage.style.display = 'flex'
+    gSelectedLine = 0
+    var elChaneButton = document.querySelector('.change-line')
+    elChaneButton.innerHTML = 'Change to second line'
     clearData()
     clearInput()
+
 }
 
 function onChooseImg(id) {
@@ -171,6 +175,8 @@ function onChangeLine() {
     drawMeme()
     drawTxtBox()
     clearInput()
+    var elInput = document.querySelector('input[name=memeText]')
+    elInput.value = line[gSelectedLine].txt
 }
 
 function onFontIncrs() {
