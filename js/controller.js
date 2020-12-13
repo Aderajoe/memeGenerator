@@ -23,6 +23,7 @@ function createNewMeme() {
     var elEntryPage = document.querySelector('.home-page')
     elEntryPage.style.display = 'flex'
     clearData()
+    clearInput()
 }
 
 function onChooseImg(id) {
@@ -73,6 +74,11 @@ function drawMeme() {
         gCtx.fillText(text, x, y)
         gCtx.strokeText(text, x, y)
     })
+}
+
+function clearInput() {
+    var elInput = document.querySelector('input[name=memeText]')
+    elInput.value = ''
 }
 
 function changeTxt() {
@@ -164,6 +170,7 @@ function onChangeLine() {
     }
     drawMeme()
     drawTxtBox()
+    clearInput()
 }
 
 function onFontIncrs() {
