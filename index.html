@@ -12,7 +12,7 @@
 <body class="body" onload="init()">
     <div class="my-hero">Meme generator</div>
     <div class="home-page">
-        <div id="img-pool">
+        <div class="img-pool">
         </div>
     </div>
     <div class="main-container edit">
@@ -20,13 +20,13 @@
         <div id="aside">
             <div id="edit-options">
                 <span class="option-line">line height</span>
-                <button class="line-up plus btn" onclick="onLineUp()">+</button>
-                <button class="line-down btn" onclick="onLineDown()">-</button>
+                <div class="line-up plus btn" onclick="onLineUp()">+</div>
+                <div class="line-down btn" onclick="onLineDown()">-</div>
                 <span class="option-font"> Font size</span>
-                <button class="larger-font btn" onclick="onFontIncrs()">+</button>
-                <button class="smaller-font btn" onclick="onFontDecrs()">-</button>
+                <div class="larger-font btn" onclick="onFontIncrs()">+</div>
+                <div class="smaller-font btn" onclick="onFontDecrs()">-</div>
             </div>
-            <input type="text" class="line-input" onclick="drawTxtBox()" name="memeText" placeholder="enter text here">
+            <input type="text" class="line-input" onkeyup="onChangeText()" onkeypress="onChangeText()" onclick="drawTxtBox()" name="memeText" placeholder="enter text here">
             <button class="change-txt btn-option" onclick="onChangeText()">Add</button>
             <button class="change-line btn-option" onclick="onChangeLine()">Change to second line </button>
             <button class="new-meme btn-option" onclick="createNewMeme()">new meme</button>

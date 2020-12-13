@@ -40,9 +40,9 @@ function onChooseImg(id) {
 function onLoadPage() {
     var strHTML = ''
     var strHTML = gImgs.map(function(img) {
-        return `<img class="image-pool"src="${img.url}" onClick="onChooseImg(${img.id})" >`
+        return `<img class="image"src="${img.url}" onClick="onChooseImg(${img.id})" >`
     })
-    var elImgPool = document.getElementById('img-pool')
+    var elImgPool = document.querySelector('.img-pool')
     elImgPool.innerHTML = strHTML.join('')
 }
 
