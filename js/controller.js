@@ -5,7 +5,7 @@ var text;
 var gTxtLocation = { x: 250, y: 100 }
 var gChosenImg
 var gSelectedLine
-var fonSize = 40
+var fontSize = 40
 var gFontSelected
 
 function init() {
@@ -43,12 +43,11 @@ function onLoadPage() {
     })
     var elImgPool = document.getElementById('img-pool')
     elImgPool.innerHTML = strHTML.join('')
-
 }
 
 function drawText(text, x, y) {
     gCtx.lineWidth = '1.5'
-    gCtx.font = 'italic small-caps 900 ' + fonSize + 'px ' + gFonts[line.font]
+    gCtx.font = 'italic small-caps 900 ' + fontSize + 'px ' + gFonts[line.font]
     gCtx.textAlign = 'center'
     gCtx.fillText(text, x, y)
     gCtx.strokeText(text, x, y)
@@ -100,8 +99,8 @@ function drawTxtBox() {
     var x = line.x;
     var y = line.y;
     gCtx.beginPath()
-    gCtx.moveTo(x - 200, y - 30)
-    gCtx.lineTo(x + 200, y - 30)
+    gCtx.moveTo(x - 200, y - line.size + 10)
+    gCtx.lineTo(x + 200, y - line.size + 10)
     gCtx.lineTo(x + 200, y + 10)
     gCtx.lineTo(x - 200, y + 10)
     gCtx.closePath()

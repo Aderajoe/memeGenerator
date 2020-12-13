@@ -7,14 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
     <title>Aderajoes meme generator</title>
-
 </head>
 
 <body class="body" onload="init()">
-
     <div class="my-hero">Meme generator</div>
     <div class="home-page">
-      
         <div id="img-pool">
         </div>
     </div>
@@ -22,15 +19,15 @@
         <canvas id="canvas" height="500" width="500"></canvas>
         <div id="aside">
             <div id="edit-options">
-                    <span class="option-line">line height</span>
-                    <button class="line-up plus btn" onclick="onLineUp()">+</button>
-                    <button class="line-down minus btn" onclick="onLineDown()">-</button>
-                    <span class="option-font"> Font size</span>
-                    <button class="larger-font btn" onclick="onFontIncrs()">+</button>
-                    <button class="smaller-font btn" onclick="onFontDecrs()">-</button>
+                <span class="option-line">line height</span>
+                <button class="line-up plus btn" onclick="onLineUp()">+</button>
+                <button class="line-down btn" onclick="onLineDown()">-</button>
+                <span class="option-font"> Font size</span>
+                <button class="larger-font btn" onclick="onFontIncrs()">+</button>
+                <button class="smaller-font btn" onclick="onFontDecrs()">-</button>
             </div>
-            <input type="text" class="line-input" name="memeText" placeholder="enter text here">
-            <button class="change-txt btn-option" onclick="onChangeText()">Change text</button>
+            <input type="text" class="line-input" onclick="drawTxtBox()" name="memeText" placeholder="enter text here">
+            <button class="change-txt btn-option" onclick="onChangeText()">Add</button>
             <button class="change-line btn-option" onclick="onChangeLine()">Change to second line </button>
             <button class="new-meme btn-option" onclick="createNewMeme()">new meme</button>
             <a class="download" onclick="downloadMeme(this)" download="">Download</a>
